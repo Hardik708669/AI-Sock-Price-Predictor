@@ -14,8 +14,8 @@ This AI-powered stock price predictor fetches real-time stock data and predicts 
 ## 🛠️ Installation
 ### 1️⃣ **Clone the Repository**
 ```sh
-git clone https://github.com/YOUR_GITHUB_USERNAME/AI-Stock-Prediction.git
-cd AI-Stock-Prediction
+git clone https://github.com/YOUR_GITHUB_USERNAME/AI-Stock-Price-Predictor.git
+cd AI-Stock-Price-Predictor
 ```
 
 ### 2️⃣ **Install Dependencies**
@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 ### 3️⃣ **Run the Application**
 ```sh
-python stock_predictor.py
+python stock.py
 ```
 
 ---
