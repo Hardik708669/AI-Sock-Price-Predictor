@@ -30,10 +30,9 @@ python stock.py
 ```
 
 ---
-## 📸 Screenshots
 🔹 **GUI Interface:**  
 ### 🎥 Demo Video
-[Click here to watch the demo](./Stock.mp4)
+[Click to watch the demo](./Stock.mp4)
 
 
 ---
