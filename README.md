@@ -32,13 +32,9 @@ python stock.py
 ---
 ## 📸 Screenshots
 🔹 **GUI Interface:**  
-![Stock Predictor GUI](https://github.com/Hardik708669/AI-Powered-Stock-Price-Prediction-/blob/main/Fig_1.png)
-![Stock Predictor GUI](https://github.com/Hardik708669/AI-Powered-Stock-Price-Prediction-/blob/main/FIg_2.png)
+### 🎥 Demo Video
+[Click here to watch the demo](./stock.mp4)
 
-
-🔹 **Stock Price Prediction Graph:**  
-![Prediction Graph](https://github.com/Hardik708669/AI-Powered-Stock-Price-Prediction-/blob/main/Figure_1.png)
-![Prediction Graph](https://github.com/Hardik708669/AI-Powered-Stock-Price-Prediction-/blob/main/Figure_2.png)
 
 ---
 ## 📊 How It Works
