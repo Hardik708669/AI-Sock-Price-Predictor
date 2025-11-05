@@ -32,7 +32,7 @@ python stock.py
 ---
 🔹 **GUI Interface:**  
 ### 🎥 Demo Video
-[Click to watch the demo](./Stock.mp4)
+https://github.com/user-attachments/assets/1cb7bab7-7f50-4b70-9ae9-8d4e8b70330b
 
 
 ---
