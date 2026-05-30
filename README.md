@@ -1,8 +1,8 @@
 # StockVision AI
 
-StockVision AI transforms the original Python desktop stock predictor into a modern full-stack AI-powered stock intelligence platform.
+StockVision AI is a full-stack AI-powered stock intelligence platform built from the original Python stock predictor.
 
-It is built to look and feel like a startup-grade fintech SaaS product with a React/TypeScript frontend, FastAPI backend, PostgreSQL schema, Firebase authentication flow, multi-model prediction engine, portfolio tools, risk analytics, sentiment intelligence, alerts, and an AI stock assistant.
+It includes a React/TypeScript frontend, FastAPI backend, live stock data, AI prediction APIs, portfolio tools, risk analytics, sentiment intelligence, alerts, and an AI stock assistant.
 
 ## Tech Stack
 
@@ -11,57 +11,44 @@ It is built to look and feel like a startup-grade fintech SaaS product with a Re
 - TypeScript
 - Vite
 - TailwindCSS
-- ShadCN-style reusable UI components
 - Framer Motion
 - React Query
 - Zustand
 - Recharts
 - ApexCharts
-- Firebase Authentication
+- Firebase Authentication wiring
 
 ### Backend
 - FastAPI
-- PostgreSQL
-- SQLAlchemy-ready architecture
 - JWT authentication
 - Firebase token verification
 - Rate limiting
-- Service layer architecture
-- Repository-ready database design
+- Service-layer architecture
+- PostgreSQL-ready schema
 
 ### AI/ML
 - Scikit-Learn Linear Regression
 - Random Forest
 - XGBoost
-- Prophet-style forecasting path
-- TensorFlow LSTM-ready forecasting path
 - Explainable AI feature importance
 - Risk analytics
 - Sentiment analysis
 
-## Product Features
+## Features
 
-- Premium landing page with animated stock chart background
-- Login, register, forgot password, and Google login flow
-- Main dashboard with portfolio value, daily P/L, confidence score, market sentiment, watchlist, news feed, and prediction center
-- Customizable dashboard widgets
-- Stock search for symbols such as `AAPL`, `TSLA`, `MSFT`, `NVDA`, `RELIANCE.NS`, and `TCS.NS`
-- Company overview, live price, market cap, volume, PE ratio, EPS, and dividend yield
-- TradingView-style charting with candlestick, line, area, and volume modes
-- Timeframes and indicator toggles for RSI, MACD, EMA, SMA, Bollinger Bands, and VWAP
+- Premium landing page
+- Login, register, forgot password, and Google login UI
+- AI dashboard with portfolio value, P/L, confidence score, sentiment, watchlist, news, and predictions
+- Stock analysis for symbols like `AAPL`, `TSLA`, `MSFT`, `NVDA`, `RELIANCE.NS`, and `TCS.NS`
+- Candlestick, line, area, and volume charts
+- RSI, MACD, EMA, SMA, Bollinger Bands, and VWAP indicator toggles
 - Multi-model prediction comparison
 - AI BUY/SELL/HOLD recommendation engine
-- News sentiment analysis with bullish, bearish, and neutral classification
-- AI stock assistant
-- Portfolio management with holdings, allocation, P/L, health score, risk score, and rebalance actions
-- Watchlist API
+- Portfolio management with health score, risk score, allocation, and rebalance actions
 - Market heatmap
-- Risk engine for volatility, Sharpe ratio, maximum drawdown, and beta
-- Prediction history database schema
-- Alert system API
-- PostgreSQL schema for users, stocks, watchlists, portfolios, transactions, predictions, news, and alerts
-- Docker setup
-- Deployment guide for Vercel, Render, and Supabase
+- Alert API
+- AI stock assistant
+- No-Docker Windows run scripts
 
 ## Folder Structure
 
@@ -75,48 +62,43 @@ It is built to look and feel like a startup-grade fintech SaaS product with a Re
 │   │   ├── services/
 │   │   ├── main.py
 │   │   └── schemas.py
-│   ├── Dockerfile
-│   ├── render.yaml
-│   └── requirements.txt
+│   └── requirements-local.txt
 ├── database/
 │   └── schema.sql
 ├── frontend/
 │   ├── src/
-│   │   ├── components/
-│   │   ├── lib/
-│   │   ├── store/
-│   │   ├── App.tsx
-│   │   └── main.tsx
 │   ├── package.json
+│   ├── package-lock.json
 │   ├── tailwind.config.ts
 │   └── vercel.json
 ├── Stock.py
-├── docker-compose.yml
-├── DEPLOYMENT.md
+├── run-backend.ps1
+├── run-frontend.ps1
+├── RUN_WITHOUT_DOCKER.md
 └── README.md
 ```
 
-## Run Locally
+## Run Without Docker
 
-Start backend dependencies and API:
+Start backend in Terminal 1:
 
-```sh
-docker compose up --build
+```powershell
+powershell -ExecutionPolicy Bypass -File .\run-backend.ps1
 ```
 
-Start frontend:
+Start frontend in Terminal 2:
 
-```sh
-cd frontend
-npm install
-npm run dev
+```powershell
+powershell -ExecutionPolicy Bypass -File .\run-frontend.ps1
 ```
 
 Open:
 
 ```txt
-http://localhost:5173
+http://127.0.0.1:5173
 ```
+
+More details are in `RUN_WITHOUT_DOCKER.md`.
 
 ## API Routes
 
@@ -140,7 +122,7 @@ http://localhost:5173
 
 ## Legacy Desktop App
 
-The original `Stock.py` CustomTkinter app is still included as a legacy desktop version. The new resume-ready product is the full-stack `StockVision AI` platform.
+`Stock.py` is kept as the legacy desktop version. The main project is now the full-stack StockVision AI web app.
 
 ## Disclaimer
 
