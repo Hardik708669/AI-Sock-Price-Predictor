@@ -1,14 +1,14 @@
 # 📈 AI Stock Price Prediction
 
 ## 🚀 Overview
-This AI-powered stock price predictor fetches real-time stock data and predicts future stock prices using **Machine Learning (XGBoost)**. The project includes a **modern GUI (CustomTkinter)** and a visualization graph comparing actual vs. predicted stock prices.
+This AI-powered stock price predictor fetches historical stock data and predicts the next closing price using **XGBoost**. The project includes a **modern GUI (CustomTkinter)** and a visualization chart showing the latest closing prices plus the predicted next-day close.
 
 ---
 ## ✨ Features
 ✅ **Real-time Stock Data** – Fetches stock prices using `yfinance`
-✅ **AI-Powered Prediction** – Uses `XGBoost` for next-day price prediction
-✅ **User-Friendly GUI** – Built with `CustomTkinter` for a futuristic design
-✅ **Graphical Representation** – Plots actual vs. predicted prices
+✅ **AI-Powered Prediction** – Uses `XGBoost` for next-day close prediction
+✅ **User-Friendly GUI** – Built with `CustomTkinter` for a clean interface
+✅ **Graphical Visualization** – Shows recent close prices and the predicted next close
 
 ---
 ## 🛠️ Installation
@@ -19,46 +19,51 @@ cd AI-Stock-Price-Predictor
 ```
 
 ### 2️⃣ **Install Dependencies**
-Make sure you have Python **3.12.3** installed. Then run:
+Make sure you have Python **3.10+** installed. Then run:
 ```sh
 pip install -r requirements.txt
 ```
 
 ### 3️⃣ **Run the Application**
 ```sh
-python stock.py
+python Stock.py
 ```
 
 ---
-🔹 **GUI Interface:**  
-### 🎥 Demo Video
-https://github.com/user-attachments/assets/1cb7bab7-7f50-4b70-9ae9-8d4e8b70330b
-
+## 📦 Dependencies
+- `customtkinter`
+- `numpy`
+- `pandas`
+- `matplotlib`
+- `scikit-learn`
+- `xgboost`
+- `yfinance`
 
 ---
 ## 📊 How It Works
-1. **Enter a stock symbol** (e.g., `AAPL` for Apple, `TSLA` for Tesla).
-2. Click **"Train Model"** to train AI on historical data.
-3. Click **"Predict Price"** to get the **next day's predicted price**.
-4. A graph will display **actual vs. predicted prices**.
+1. Enter a stock symbol (e.g. `AAPL`, `TSLA`).
+2. Click **Train Model** to download historical data and train the predictor.
+3. Click **Predict Price** to forecast the next closing price.
+4. The app displays the predicted price and the latest known close price.
 
 ---
 ## 🤖 Technologies Used
-- **Python 3.12.3**
+- **Python**
 - **XGBoost** – Machine Learning Model
-- **yfinance** – Fetches real-time stock data
+- **yfinance** – Fetches historical stock data
 - **CustomTkinter** – Modern GUI Framework
-- **Matplotlib** – Graphical visualization
-- **Pandas & Numpy** – Data handling
+- **Matplotlib** – Plotting library
+- **Pandas & NumPy** – Data handling
 
 ---
-## 📌 Contributing
-Feel free to fork this repository, improve the model, or enhance the GUI! Submit a pull request if you'd like to contribute. 😊
+## 📌 Notes
+- The app requires at least 70 days of historical data to train properly.
+- Predictions are based on the latest 60 closing prices.
 
 ---
 ## 📜 License
 This project is licensed under the **MIT License**.
 
 ---
-### 🌟 **Star this repo if you like it!** ⭐
+### 🌟 Star the repo if you like it! ⭐
 
