@@ -7,7 +7,8 @@ export type WidgetKey =
   | "sentiment"
   | "watchlist"
   | "news"
-  | "prediction";
+  | "prediction"
+  | "trending";
 
 type AppStore = {
   selectedSymbol: string;
@@ -20,7 +21,7 @@ type AppStore = {
 
 export const useAppStore = create<AppStore>((set) => ({
   selectedSymbol: "AAPL",
-  widgets: ["portfolio", "profitLoss", "confidence", "sentiment", "watchlist", "news", "prediction"],
+  widgets: ["portfolio", "profitLoss", "confidence", "sentiment", "watchlist", "news", "prediction", "trending"],
   hiddenWidgets: [],
   setSymbol: (selectedSymbol) => set({ selectedSymbol }),
   moveWidget: (from, to) =>

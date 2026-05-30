@@ -10,7 +10,7 @@ const chartData = Array.from({ length: 64 }, (_, index) => ({
 }));
 
 const features = [
-  { icon: Brain, title: "AI Predictions", copy: "Linear Regression, Random Forest, XGBoost, Prophet, and LSTM signals." },
+  { icon: Brain, title: "AI Predictions", copy: "Linear Regression, Random Forest, XGBoost, trend forecast, and LSTM-style momentum signals." },
   { icon: Activity, title: "Sentiment Analysis", copy: "News classification, sentiment trend, and AI market summaries." },
   { icon: Briefcase, title: "Portfolio Tracker", copy: "Holdings, allocation, health score, P/L, and automatic rebalancing." },
   { icon: Gauge, title: "Risk Analysis", copy: "Volatility, beta, Sharpe ratio, drawdown, and risk tiers." },

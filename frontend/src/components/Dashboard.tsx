@@ -15,6 +15,7 @@ const labels: Record<WidgetKey, string> = {
   watchlist: "Watchlist",
   news: "News Feed",
   prediction: "Prediction Center",
+  trending: "Trending Stocks",
 };
 
 export function Dashboard() {

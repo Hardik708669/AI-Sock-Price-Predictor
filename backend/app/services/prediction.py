@@ -80,12 +80,12 @@ class PredictionService:
                 )
             )
 
-        prophet_forecast = float(data["Close"].rolling(7).mean().iloc[-1] * (1 + data["Close"].pct_change(30).iloc[-1] / 30))
+        trend_forecast = float(data["Close"].rolling(7).mean().iloc[-1] * (1 + data["Close"].pct_change(30).iloc[-1] / 30))
         lstm_forecast = self._lstm_like_forecast(data["Close"])
         models.extend(
             [
-                ModelPrediction(model_name="Prophet", predicted_price=round(prophet_forecast, 2), confidence=72.5, accuracy=74.0),
-                ModelPrediction(model_name="TensorFlow LSTM", predicted_price=round(lstm_forecast, 2), confidence=76.0, accuracy=77.4),
+                ModelPrediction(model_name="Trend Forecast", predicted_price=round(trend_forecast, 2), confidence=72.5, accuracy=74.0),
+                ModelPrediction(model_name="LSTM-Style Momentum", predicted_price=round(lstm_forecast, 2), confidence=76.0, accuracy=77.4),
             ]
         )
 
