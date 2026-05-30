@@ -1,69 +1,147 @@
-# 📈 AI Stock Price Prediction
+# StockVision AI
 
-## 🚀 Overview
-This AI-powered stock price predictor fetches historical stock data and predicts the next closing price using **XGBoost**. The project includes a **modern GUI (CustomTkinter)** and a visualization chart showing the latest closing prices plus the predicted next-day close.
+StockVision AI transforms the original Python desktop stock predictor into a modern full-stack AI-powered stock intelligence platform.
 
----
-## ✨ Features
-✅ **Real-time Stock Data** – Fetches stock prices using `yfinance`
-✅ **AI-Powered Prediction** – Uses `XGBoost` for next-day close prediction
-✅ **User-Friendly GUI** – Built with `CustomTkinter` for a clean interface
-✅ **Graphical Visualization** – Shows recent close prices and the predicted next close
+It is built to look and feel like a startup-grade fintech SaaS product with a React/TypeScript frontend, FastAPI backend, PostgreSQL schema, Firebase authentication flow, multi-model prediction engine, portfolio tools, risk analytics, sentiment intelligence, alerts, and an AI stock assistant.
 
----
-## 🛠️ Installation
-### 1️⃣ **Clone the Repository**
-```sh
-git clone https://github.com/YOUR_GITHUB_USERNAME/AI-Stock-Price-Predictor.git
-cd AI-Stock-Price-Predictor
+## Tech Stack
+
+### Frontend
+- React.js
+- TypeScript
+- Vite
+- TailwindCSS
+- ShadCN-style reusable UI components
+- Framer Motion
+- React Query
+- Zustand
+- Recharts
+- ApexCharts
+- Firebase Authentication
+
+### Backend
+- FastAPI
+- PostgreSQL
+- SQLAlchemy-ready architecture
+- JWT authentication
+- Firebase token verification
+- Rate limiting
+- Service layer architecture
+- Repository-ready database design
+
+### AI/ML
+- Scikit-Learn Linear Regression
+- Random Forest
+- XGBoost
+- Prophet-style forecasting path
+- TensorFlow LSTM-ready forecasting path
+- Explainable AI feature importance
+- Risk analytics
+- Sentiment analysis
+
+## Product Features
+
+- Premium landing page with animated stock chart background
+- Login, register, forgot password, and Google login flow
+- Main dashboard with portfolio value, daily P/L, confidence score, market sentiment, watchlist, news feed, and prediction center
+- Customizable dashboard widgets
+- Stock search for symbols such as `AAPL`, `TSLA`, `MSFT`, `NVDA`, `RELIANCE.NS`, and `TCS.NS`
+- Company overview, live price, market cap, volume, PE ratio, EPS, and dividend yield
+- TradingView-style charting with candlestick, line, area, and volume modes
+- Timeframes and indicator toggles for RSI, MACD, EMA, SMA, Bollinger Bands, and VWAP
+- Multi-model prediction comparison
+- AI BUY/SELL/HOLD recommendation engine
+- News sentiment analysis with bullish, bearish, and neutral classification
+- AI stock assistant
+- Portfolio management with holdings, allocation, P/L, health score, risk score, and rebalance actions
+- Watchlist API
+- Market heatmap
+- Risk engine for volatility, Sharpe ratio, maximum drawdown, and beta
+- Prediction history database schema
+- Alert system API
+- PostgreSQL schema for users, stocks, watchlists, portfolios, transactions, predictions, news, and alerts
+- Docker setup
+- Deployment guide for Vercel, Render, and Supabase
+
+## Folder Structure
+
+```txt
+.
+├── backend/
+│   ├── app/
+│   │   ├── api/
+│   │   ├── core/
+│   │   ├── db/
+│   │   ├── services/
+│   │   ├── main.py
+│   │   └── schemas.py
+│   ├── Dockerfile
+│   ├── render.yaml
+│   └── requirements.txt
+├── database/
+│   └── schema.sql
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── lib/
+│   │   ├── store/
+│   │   ├── App.tsx
+│   │   └── main.tsx
+│   ├── package.json
+│   ├── tailwind.config.ts
+│   └── vercel.json
+├── Stock.py
+├── docker-compose.yml
+├── DEPLOYMENT.md
+└── README.md
 ```
 
-### 2️⃣ **Install Dependencies**
-Make sure you have Python **3.10+** installed. Then run:
+## Run Locally
+
+Start backend dependencies and API:
+
 ```sh
-pip install -r requirements.txt
+docker compose up --build
 ```
 
-### 3️⃣ **Run the Application**
+Start frontend:
+
 ```sh
-python Stock.py
+cd frontend
+npm install
+npm run dev
 ```
 
----
-## 📦 Dependencies
-- `customtkinter`
-- `numpy`
-- `pandas`
-- `matplotlib`
-- `scikit-learn`
-- `xgboost`
-- `yfinance`
+Open:
 
----
-## 📊 How It Works
-1. Enter a stock symbol (e.g. `AAPL`, `TSLA`).
-2. Click **Train Model** to download historical data and train the predictor.
-3. Click **Predict Price** to forecast the next closing price.
-4. The app displays the predicted price and the latest known close price.
+```txt
+http://localhost:5173
+```
 
----
-## 🤖 Technologies Used
-- **Python**
-- **XGBoost** – Machine Learning Model
-- **yfinance** – Fetches historical stock data
-- **CustomTkinter** – Modern GUI Framework
-- **Matplotlib** – Plotting library
-- **Pandas & NumPy** – Data handling
+## API Routes
 
----
-## 📌 Notes
-- The app requires at least 70 days of historical data to train properly.
-- Predictions are based on the latest 60 closing prices.
+- `GET /api/v1/health`
+- `POST /api/v1/auth/register`
+- `POST /api/v1/auth/login`
+- `POST /api/v1/auth/firebase`
+- `GET /api/v1/stocks/search?q=AAPL`
+- `GET /api/v1/stocks/{symbol}/overview`
+- `GET /api/v1/stocks/{symbol}/candles`
+- `GET /api/v1/stocks/{symbol}/technicals`
+- `GET /api/v1/predictions/{symbol}`
+- `GET /api/v1/sentiment/{symbol}`
+- `GET /api/v1/risk/{symbol}`
+- `POST /api/v1/portfolio/analyze`
+- `GET /api/v1/watchlist`
+- `POST /api/v1/alerts`
+- `GET /api/v1/heatmap`
+- `GET /api/v1/dashboard`
+- `POST /api/v1/assistant`
 
----
-## 📜 License
-This project is licensed under the **MIT License**.
+## Legacy Desktop App
 
----
-### 🌟 Star the repo if you like it! ⭐
+The original `Stock.py` CustomTkinter app is still included as a legacy desktop version. The new resume-ready product is the full-stack `StockVision AI` platform.
 
+## Disclaimer
+
+This project is educational. It is not financial advice.
