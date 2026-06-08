@@ -1,1 +1,0 @@
-"""StockVision AI backend package."""

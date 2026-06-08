@@ -1,7 +1,0 @@
-customtkinter
-numpy
-pandas
-matplotlib
-scikit-learn
-xgboost
-yfinance
